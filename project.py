@@ -8,19 +8,25 @@ from boilerplate_setup import (
     _define_header,
 )
 
-with ptg.WindowManager() as manager:
-    _define_aliases()
-    _config_widgets()
-    manager.layout = _define_layout()
-    header = _define_header()
 
-    controls = ptg.Window(
-        MainControls(),
-        box="EMPTY",
-    )
+def main():
+    with ptg.WindowManager() as manager:
+        _define_aliases()
+        _config_widgets()
+        manager.layout = _define_layout()
+        header = _define_header()
 
-    footer = _define_footer(manager)
+        controls = ptg.Window(
+            MainControls(),
+            box="EMPTY",
+        )
 
-    manager.add(header)
-    manager.add(controls)
-    manager.add(footer)
+        footer = _define_footer(manager)
+
+        manager.add(header)
+        manager.add(controls)
+        manager.add(footer)
+
+
+if __name__ == "__main__":
+    main()
