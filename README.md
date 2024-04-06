@@ -103,7 +103,7 @@ The tests are run using [Pytest](https://docs.pytest.org/en/8.0.x/)
 to run the tests:
 
   ```shell
-  pytest tests/
+  pytest tests_project.py
   ```
 
 
