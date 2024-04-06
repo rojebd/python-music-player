@@ -19,34 +19,11 @@ config_file = open(config_file)
 config_parser.read_file(config_file)
 config_file.close()
 
-try:
-    MUSIC_PATH = config_parser.get("Config", "MUSIC_PATH")
-except configparser.NoOptionError:
-    MUSIC_PATH = f"{__file__}"
-
-try:
-    VOL_DOWN = config_parser.getint("Config", "VOL_DOWN")
-
-except configparser.NoOptionError:
-    VOL_DOWN = 3
-
-try:
-    VOL_UP = config_parser.getint("Config", "VOL_UP")
-
-except configparser.NoOptionError:
-    VOL_UP = 3
-
-try:
-    REWIND = config_parser.getint("Config", "REWIND")
-
-except configparser.NoOptionError:
-    REWIND = 3
-
-try:
-    FORWARD = config_parser.getint("Config", "FORWARD")
-
-except configparser.NoOptionError:
-    FORWARD = 3
+MUSIC_PATH = config_parser.get("Config", "MUSIC_PATH", fallback=f"{__file__}")
+VOL_DOWN = config_parser.getint("Config", "VOL_DOWN", fallback=3)
+VOL_UP = config_parser.getint("Config", "VOL_UP", fallback=3)
+REWIND = config_parser.getint("Config", "REWIND", fallback=3)
+FORWARD = config_parser.getint("Config", "FORWARD", fallback=3)
 
 
 current_volume = 0.5
