@@ -1,11 +1,11 @@
 # Simple Python Music Player
 
-#### Video Demo: <URL Here>
+### Video Demo: <URL Here>
 
 ### Screenshot:
 ![Alt text](./screenshot.png?raw=true "Screenshot of project")
 
-#### Description:
+### Description:
 This is a simple TUI (Terminal User Interface) to play music files in python
 made with the incredible TUI python library [pytermgui](https://github.com/bczsalba/pytermgui) and the audio
 part is with the help of the simple and asynchronous audio library [just-playback](https://github.com/cheofusi/just_playback)
@@ -14,7 +14,7 @@ It has the ability to play most common audio files such as WAV and MP3
 and has the ability to have some basic [configuration](#config)
 
 
-##### Features:
+### Features:
   - Plays:
     - Wav Files
     - MP3 Files
