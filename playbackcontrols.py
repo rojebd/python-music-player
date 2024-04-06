@@ -4,30 +4,47 @@ import just_playback
 import pathlib
 import threading
 import time
+import configparser
+import os
+
+
+def get_config_file():
+    return str(pathlib.Path.home())
+
+
+config_file = get_config_file()
+config_file = f"{config_file}/.music-config.txt"
+
+config_parser = configparser.ConfigParser()
+config_parser.read_file(open(config_file))
 
 try:
-    from config import MUSIC_PATH
-except ImportError:
+    MUSIC_PATH = config_parser.get("Config", "MUSIC_PATH")
+except configparser.NoOptionError:
     MUSIC_PATH = f"{__file__}"
 
 try:
-    from config import VOL_DOWN
-except ImportError:
+    VOL_DOWN = config_parser.get("Config", "VOL_DOWN")
+
+except configparser.NoOptionError:
     VOL_DOWN = 3
 
 try:
-    from config import VOL_UP
-except ImportError:
+    VOL_UP = config_parser.get("Config", "VOL_UP")
+
+except configparser.NoOptionError:
     VOL_UP = 3
 
 try:
-    from config import REWIND
-except ImportError:
+    REWIND = config_parser.get("Config", "REWIND")
+
+except configparser.NoOptionError:
     REWIND = 3
 
 try:
-    from config import FORWARD
-except ImportError:
+    FORWARD = config_parser.get("Config", "FORWARD")
+
+except configparser.NoOptionError:
     FORWARD = 3
 
 

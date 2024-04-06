@@ -45,12 +45,27 @@ player because CMUS crashed when I switched to alpine linux
 
 ### Config
 
-Configure the OPTIONS in the config.py this file must be at the root of the project
+Configure the OPTIONS in the config.txt this file is at your home directory  
+and is called .config.txt
 
 All other options such as VOL_DOWN, VOL_UP, REWIND, FORWARD are optional and if not configured
 are given a default value the value give is 3)
 
 MUSIC_PATH if not configured is given the value of the playbackcontrols project __file__
+
+For example a basic config file looks like this:
+
+```text
+
+  [Config]
+  MUSIC_PATH = "/home/roniell/coding/python/music-player/assets"
+  REWIND = "3"
+  FORWARD = "3"
+  VOL_UP = "3"
+  VOL_DOWN = "3"
+
+```
+
 
 Options:
 
@@ -81,8 +96,6 @@ Options:
   palette_colors.py:
     - Where some global variables for the TUI colors are initialized, they are put in a separate file to not bloat the main file
 
-  config.py:
-    - Your configuration file for the TUI to configure it see [configuration](#config)
 
 ### Depedencies / Running
 The depedencies are in the in the requirements.txt
