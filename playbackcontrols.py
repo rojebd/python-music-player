@@ -53,7 +53,7 @@ def load_song(song):
         audio.play()
 
     except Exception as error:
-        raise Exception(error)
+        raise Exception(f"Invalid Audio File of type WAV or MP3 Error: {error}")
 
     return True
 
