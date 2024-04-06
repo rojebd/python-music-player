@@ -4,15 +4,12 @@
 
 #### Description:
 This is a simple TUI (Terminal User Interface) to play music files in python
-made with the incredible TUI python library [pytermgui] and the audio
-part is with the help of the simple and asynchronous audio library [just-playback]
+made with the incredible TUI python library [pytermgui](https://github.com/bczsalba/pytermgui) and the audio
+part is with the help of the simple and asynchronous audio library [just-playback](https://github.com/cheofusi/just_playback)
 
 It has the ability to play most common audio files such as WAV and MP3
-and has the ability to have some basic [configuration]
+and has the ability to have some basic [configuration](#config)
 
-[configuration](#config)
-[pytermgui]: https://github.com/bczsalba/pytermgui
-[just-playback]: https://github.com/cheofusi/just_playback
 
 ##### Features:
   - Plays:
