@@ -5,7 +5,6 @@ import pathlib
 import threading
 import time
 import configparser
-import os
 
 
 def get_config_file():
@@ -16,7 +15,9 @@ config_file = get_config_file()
 config_file = f"{config_file}/.music-config.txt"
 
 config_parser = configparser.ConfigParser()
-config_parser.read_file(open(config_file))
+config_file = open(config_file)
+config_parser.read_file(config_file)
+config_file.close()
 
 try:
     MUSIC_PATH = config_parser.get("Config", "MUSIC_PATH")
@@ -24,25 +25,25 @@ except configparser.NoOptionError:
     MUSIC_PATH = f"{__file__}"
 
 try:
-    VOL_DOWN = int(config_parser.get("Config", "VOL_DOWN"))
+    VOL_DOWN = config_parser.getint("Config", "VOL_DOWN")
 
 except configparser.NoOptionError:
     VOL_DOWN = 3
 
 try:
-    VOL_UP = int(config_parser.get("Config", "VOL_UP"))
+    VOL_UP = config_parser.getint("Config", "VOL_UP")
 
 except configparser.NoOptionError:
     VOL_UP = 3
 
 try:
-    REWIND = int(config_parser.get("Config", "REWIND"))
+    REWIND = config_parser.getint("Config", "REWIND")
 
 except configparser.NoOptionError:
     REWIND = 3
 
 try:
-    FORWARD = int(config_parser.get("Config", "FORWARD"))
+    FORWARD = config_parser.getint("Config", "FORWARD")
 
 except configparser.NoOptionError:
     FORWARD = 3
