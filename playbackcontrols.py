@@ -59,8 +59,6 @@ def load_song(song):
     except Exception as error:
         raise Exception(f"Invalid Audio File of type WAV or MP3 Error: {error}")
 
-    return True
-
 
 def toggle_audio():
     global playing
