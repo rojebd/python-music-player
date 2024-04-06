@@ -1,5 +1,14 @@
 # Simple Python Music Player
 
+[Description](#description)
+[Features](#features)
+[FAQ](#faq)
+[About](#about)
+[Configuration](#config)
+[Project Structure / Files](#project-files--structure)
+[Tests](#tests)
+[Depedencies / Running](#depedencies--running)
+
 ### Video Demo: [Watch Demo]()
 
 ### Screenshot:
