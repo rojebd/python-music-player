@@ -35,10 +35,11 @@ player because CMUS crashed when I switched to alpine linux
 ### Config
 
 Configure the OPTIONS in the config.py this file must be at the root of the project
-the only mandatory option to have configured so the program runs is MUSIC_PATH (the path to your music files)
 
 All other options such as VOL_DOWN, VOL_UP, REWIND, FORWARD are optional and if not configured
 are given a default value (the value being 3)
+
+MUSIC_PATH if not configured is given the value of the playbackcontrols project __file__
 
 Options:
 

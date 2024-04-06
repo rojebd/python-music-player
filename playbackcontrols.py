@@ -8,7 +8,7 @@ import time
 try:
     from config import MUSIC_PATH
 except ImportError:
-    raise ImportError("Must have MUSIC_PATH declared")
+    MUSIC_PATH = f"{__file__}"
 
 try:
     from config import VOL_DOWN
