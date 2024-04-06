@@ -38,9 +38,13 @@ songs_path = pathlib.Path(MUSIC_PATH)
 total_songs = []
 current_playing_song = None
 
-for song in songs_path.iterdir():
-    if str(song).endswith((".wav", ".mp3")):
-        total_songs.append(song)
+try:
+    for song in songs_path.iterdir():
+        if str(song).endswith((".wav", ".mp3")):
+            total_songs.append(song)
+
+except FileNotFoundError:
+    raise FileNotFoundError("Invalid directory or directory does not exist")
 
 
 def load_song(song):
