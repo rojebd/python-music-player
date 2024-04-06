@@ -24,25 +24,25 @@ except configparser.NoOptionError:
     MUSIC_PATH = f"{__file__}"
 
 try:
-    VOL_DOWN = config_parser.get("Config", "VOL_DOWN")
+    VOL_DOWN = int(config_parser.get("Config", "VOL_DOWN"))
 
 except configparser.NoOptionError:
     VOL_DOWN = 3
 
 try:
-    VOL_UP = config_parser.get("Config", "VOL_UP")
+    VOL_UP = int(config_parser.get("Config", "VOL_UP"))
 
 except configparser.NoOptionError:
     VOL_UP = 3
 
 try:
-    REWIND = config_parser.get("Config", "REWIND")
+    REWIND = int(config_parser.get("Config", "REWIND"))
 
 except configparser.NoOptionError:
     REWIND = 3
 
 try:
-    FORWARD = config_parser.get("Config", "FORWARD")
+    FORWARD = int(config_parser.get("Config", "FORWARD"))
 
 except configparser.NoOptionError:
     FORWARD = 3
