@@ -2,6 +2,9 @@
 
 #### Video Demo: <URL Here>
 
+### Screenshot:
+![Alt text](./screenshot.png?raw=true "Screenshot of project")
+
 #### Description:
 This is a simple TUI (Terminal User Interface) to play music files in python
 made with the incredible TUI python library [pytermgui](https://github.com/bczsalba/pytermgui) and the audio
