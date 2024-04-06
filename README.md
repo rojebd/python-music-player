@@ -59,10 +59,10 @@ For example a basic config file looks like this:
 
   [Config]
   MUSIC_PATH = "/home/roniell/coding/python/music-player/assets"
-  REWIND = "3"
-  FORWARD = "3"
-  VOL_UP = "3"
-  VOL_DOWN = "3"
+  REWIND = 3
+  FORWARD = 3
+  VOL_UP = 3
+  VOL_DOWN = 3
 
 ```
 
