@@ -1,6 +1,6 @@
 # Simple Python Music Player
 
-### Video Demo: <URL Here>
+### Video Demo: [Watch Demo]()
 
 ### Screenshot:
 ![Alt text](./screenshot.png?raw=true "Screenshot of project")
@@ -21,11 +21,14 @@ It can also rewind, forward pause/play and some basic configuration
     - MP3 Files
 
   - Simple to use set the MUSIC_PATH Configuration variable to point to your music and 
-    launch the app and start listening!
+    launch the app and start listening, If the varibable is not set then it sets it as the
+    scripts directory
 
-  - Forward and Rewind by a multiplier
-  - Volume Up and Volume Down independtly of system volume by a multiplier
-  - Shows time left in song (e.g 1:02 / 3:34 )
+  - Forward by a multiplier 
+  - Rewind by a multiplier
+  - Volume Up by a multiplier
+  - Volume Down by a multiplier
+  - Shows current time left in the song (example 1:02 / 3:34 )
 
 
 ### About
@@ -38,7 +41,7 @@ player because CMUS crashed when I switched to alpine linux
 Configure the OPTIONS in the config.py this file must be at the root of the project
 
 All other options such as VOL_DOWN, VOL_UP, REWIND, FORWARD are optional and if not configured
-are given a default value (the value being 3)
+are given a default value the value give is 3)
 
 MUSIC_PATH if not configured is given the value of the playbackcontrols project __file__
 
@@ -95,3 +98,19 @@ to run the tests:
   ```shell
   pytest tests/
   ```
+
+
+# FAQ
+
+Q: Can it play more files than just MP3 and WAV
+
+A: No, other file formats are not implemented right now
+
+Q: What does Exception: "Invalid Audio File of type WAV or MP3 Error" mean?
+
+A: It means that the WAV or MP3 file you tried to play was not valid and the app could
+   not play it
+
+Q: What does FileNotFoundError "Invalid directory or directory does not exist"
+
+A: It means that the directory specified in music path does not exist or is invalid
