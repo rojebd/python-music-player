@@ -9,8 +9,6 @@
 [Tests](#tests)  
 [Depedencies / Running](#depedencies--running)  
 
-### Video Demo: [Watch Demo]()
-
 ### Screenshot:
 ![Alt text](./screenshot.png?raw=true "Screenshot of project")
 
