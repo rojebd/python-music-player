@@ -13,6 +13,7 @@ part is with the help of the simple and asynchronous audio library [just-playbac
 It has the ability to play most common audio files such as WAV and MP3
 and has the ability to have some basic [configuration](#config)
 
+It can also rewind, forward pause/play and some basic configuration
 
 ### Features:
   - Plays:
