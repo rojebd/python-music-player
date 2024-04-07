@@ -1,5 +1,5 @@
 import pytermgui as ptg
-from playbackcontrols import MainControls, audio
+from playbackcontrols import MainControls, audio, toggle_audio
 from palette_colors import *
 
 
@@ -105,6 +105,8 @@ def main():
         manager.add(header)
         manager.add(controls)
         manager.add(footer)
+
+        manager.bind(ptg.keys.SPACE, toggle_audio)
 
 
 if __name__ == "__main__":
