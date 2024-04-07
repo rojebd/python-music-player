@@ -55,9 +55,8 @@ def load_song(song):
         raise Exception(f"Invalid Audio File of type WAV or MP3 Error: {error}")
 
 
-# 2 fake arguments are given so the app does not crash since in project.py
-# we bind space to this function and for some reason it gives it 2 args?
-def toggle_audio(useless_arg1=None, uselesss_arg2=None):
+# Weird hack
+def toggle_audio(*args):
     global playing
     if playing:
         audio.pause()
