@@ -6,7 +6,8 @@ import threading
 import time
 import configparser
 
-
+# TODO: Be XDG Compliant so we just dont dump random dotfiles on the user's home directory
+# XXX: What does pathlib.Path.home() returns on Windows? I wonder if we could use the windows AppData Instead and .config for UNIX
 def get_config_file():
     return str(pathlib.Path.home())
 
